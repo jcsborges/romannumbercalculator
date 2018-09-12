@@ -1,0 +1,3 @@
+include ':mobile', ':wear', ':com.jcsb.romannumber'
+
+project(':com.jcsb.romannumber').projectDir=new File('../RomanNumberLib/com.jcsb.romannumber')
