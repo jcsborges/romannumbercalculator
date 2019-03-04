@@ -6,7 +6,7 @@
     tools:context=".RomanNumberConverter"
     android:orientation="vertical">
 
-
+ 
 
 
         <TextView
@@ -71,7 +71,8 @@
         android:ems="10"
         android:hint="@string/converter_edInput_hint"
         android:inputType="textCapCharacters"
-        android:textAllCaps="true"/>
+        android:textAllCaps="true"
+        android:autofillHints="@string/converter_edInput_autofill" />
 
         <TextView
             android:id="@+id/tvOutputText"
@@ -86,6 +87,6 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-
+ 
 
 </LinearLayout>

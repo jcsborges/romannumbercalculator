@@ -1,16 +1,40 @@
 <resources>
-    <string name="app_name">RomanNumberCalculator</string>
+    <string name="app_name">Calculadora Romana Z</string>
 
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Calculadora Romana Z</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="converter_text1">Para traduzir é simples.</string>
+    <string name="converter_text2">Passo 1: Selecione Romano para Numeral ou vice e versa</string>
+    <string name="converter_rb1">Romano para numeral</string>
+    <string name="converter_rb2">Numeral para romano</string>
+    <string name="converter_text3">Passo 2: Informe o número romano ou decimal para traduzir</string>
+    <string name="converter_input_text">Texto de entrada</string>
+    <string name="converter_output_text">Texto de saída</string>
+    <string name="converter_edInput_hint">Texto de entrada</string>
+    <string name="converter_edInput_autofill">Texto de entrada</string>
+    <string name="calc_btnAc">A/C</string>
+    <string name="calc_btnDiv">/</string>
+    <string name="calc_btn7">7</string>
+    <string name="calc_btn8">8</string>
+    <string name="calc_btn9">9</string>
+    <string name="calc_btnMulti">X</string>
+    <string name="calc_btn4">4</string>
+    <string name="calc_btn5">5</string>
+    <string name="calc_btn6">6</string>
+    <string name="calc_btnMinus">-</string>
+    <string name="calc_btn1">1</string>
+    <string name="calc_btn2">2</string>
+    <string name="calc_btn3">3</string>
+    <string name="calc_btnPlus">+</string>
+    <string name="calc_btn0">0</string>
+    <string name="calc_btnEqual">=</string>
+    <string name="home_text1">Olá!</string>
+    <string name="home_text2">Esse é um app com objetivo de aprendizado. Aqui você poderá realizar cálculos com números romanos, converter números romanos para numeral e vice e versa.</string>
+    <string name="home_text3">Comece por aqui.</string>
+    <string name="header_main_text">I V X L C D M</string>
+    <string name="menu_home">Início</string>
+    <string name="menu_translate">Tradutor</string>
+    <string name="menu_calc">Calculadora</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,30 +1,24 @@
 package com.jcsb.romannumbercalculator
 
+import android.inputmethodservice.Keyboard
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import android.widget.EditText
-import android.content.Intent
-import android.net.Uri
 import android.support.v4.app.Fragment
-import com.google.android.gms.common.internal.safeparcel.SafeParcelable
-import java.lang.reflect.Type
-import java.util.*
-import kotlin.reflect.KClass
+import android.view.inputmethod.InputMethodManager.HIDE_IMPLICIT_ONLY
+import android.content.Context.INPUT_METHOD_SERVICE
+import android.support.v4.content.ContextCompat.getSystemService
+import android.view.inputmethod.InputMethodManager
 
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, RomanNumberConverter.OnFragmentInteractionListener {
-    override fun onFragmentInteraction(uri: Uri) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,13 +59,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        when (item.itemId) {
-            R.id.action_settings -> return true
-            else -> return super.onOptionsItemSelected(item)
-        }
+
+        return return super.onOptionsItemSelected(item)
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
+
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_translate -> {
@@ -82,20 +76,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.nav_calculator -> {
 
-            }
-            R.id.nav_share -> {
+                this.changeFragment(RomanCalculator::class.java, item)
 
             }
-            R.id.nav_send -> {
+            R.id.nav_home -> {
+                this.changeFragment(HomeFragment::class.java, item)
 
             }
+
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
 
-    fun <T : Any> changeFragment(fragmentClass: Class<T>, item: MenuItem? = null, newTitle: String? = null) {
+    private fun <T : Any> changeFragment(fragmentClass: Class<T>, item: MenuItem? = null, newTitle: String? = null) {
 
         val fragmentManager = this.supportFragmentManager
         val fragment = fragmentClass.newInstance() as Fragment
